@@ -180,7 +180,7 @@ app.get("/invite", async (req, res) => {
 
 // setting up a cron job for executing getData every 10seconds.
 job = new CronJob(
-  "*/10 * * * * *",
+  "*/30 * * * * *",
   getData,
   null,
   false,
