@@ -1,0 +1,131 @@
+.container {
+  height: 100vh;
+  width: 100%;
+  background-color: #aadaff;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  position: relative;
+}
+
+.map {
+  height: 75vh;
+  width: 75%;
+  position: relative;
+  &__marker {
+    font-size: 1rem;
+    cursor: pointer;
+    position: relative;
+    &-pin {
+      height: 20px;
+      width: 20px;
+      border-radius: 20px;
+    }
+    &-content {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      background-color: #fff;
+      padding: 1rem 1.5rem;
+      gap: 1rem;
+      font-family: "Nunito", sans-serif;
+      border-radius: 5px;
+      box-shadow: 2.8px 2.8px 2.2px rgba(0, 0, 0, 0.02),
+        6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028),
+        12.5px 12.5px 10px rgba(0, 0, 0, 0.035),
+        22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042),
+        41.8px 41.8px 33.4px rgba(0, 0, 0, 0.05),
+        100px 100px 80px rgba(0, 0, 0, 0.07);
+      white-space: nowrap;
+      transform: translate(20px, -100%);
+      z-index: 10;
+      display: none;
+      &:hover {
+        z-index: 1000;
+      }
+    }
+  }
+}
+
+.cross {
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  top: 5px;
+  right: 5px;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  color: white;
+  font-weight: bold;
+  cursor: default;
+  background-color: #141414;
+}
+
+.buttonGroup {
+  display: flex;
+  flex-direction: row;
+}
+
+.btn_invite {
+  background-color: #fff;
+  border: none;
+  padding: 1rem;
+  border-radius: 2px;
+  font-family: "Nunito", sans-serif;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.5s ease;
+  &:hover {
+    box-shadow: 2.8px 2.8px 2.2px rgba(0, 0, 0, 0.02),
+      6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028),
+      12.5px 12.5px 10px rgba(0, 0, 0, 0.035),
+      22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042),
+      41.8px 41.8px 33.4px rgba(0, 0, 0, 0.05),
+      100px 100px 80px rgba(0, 0, 0, 0.07);
+  }
+  &:active {
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+  }
+}
+.btn_download {
+  background-color: #fff;
+  border: none;
+  padding: 1rem;
+  border-radius: 2px;
+  font-family: "Nunito", sans-serif;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.5s ease;
+  & a {
+    &:link,
+    &:active {
+      text-decoration: none;
+      color: #141414;
+    }
+  }
+  &:hover {
+    box-shadow: 2.8px 2.8px 2.2px rgba(0, 0, 0, 0.02),
+      6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028),
+      12.5px 12.5px 10px rgba(0, 0, 0, 0.035),
+      22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042),
+      41.8px 41.8px 33.4px rgba(0, 0, 0, 0.05),
+      100px 100px 80px rgba(0, 0, 0, 0.07);
+  }
+  &:active {
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.lastUpdated {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  & > div:nth-child(1) {
+    text-decoration: underline;
+    font-weight: bold;
+  }
+}
